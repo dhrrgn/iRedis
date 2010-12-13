@@ -138,7 +138,7 @@ class iRedis {
      * @return  string  the reply
      * @throws  RedisException
      */
-    protected function readReply()
+    public function readReply()
     {
         if ( ! $this->connection)
         {
