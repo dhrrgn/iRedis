@@ -177,7 +177,7 @@ class iRedis {
                 {
                     $bulk_head = trim(fgets($this->connection, 512));
 
-                    if ($size == '-1')
+                    if (substr($bulk_head, 1) == '-1')
                     {
                         $response[] = null;
                     }
