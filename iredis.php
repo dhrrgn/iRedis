@@ -176,15 +176,7 @@ class iRedis {
                 for ($i = 0; $i < $count; $i++)
                 {
                     $bulk_head = trim(fgets($this->connection, 512));
-
-                    if ($size == '-1')
-                    {
-                        $response[] = null;
-                    }
-                    else
-                    {
-                        $response[] = $this->readBulkReply($bulk_head);
-                    }
+                    $response[] = $this->readBulkReply($bulk_head);
                 }
             break;
 
