@@ -8,7 +8,7 @@
   <style type="text/css">
     body {
       margin-top: 1.0em;
-      background-color: #e38a18;
+      background-color: #FFFFFF;
       font-family: Helvetica, Arial, FreeSans, san-serif;
       color: #000000;
     }
@@ -16,15 +16,15 @@
       margin: 0 auto;
       width: 700px;
     }
-    h1 { font-size: 3.8em; color: #1c75e7; margin-bottom: 3px; }
+    h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #1c75e7; }
-    h3 { text-align: center; color: #1c75e7; }
-    a { color: #1c75e7; }
+    h2 { font-size: 1.5em; color: #000000; }
+    h3 { text-align: center; color: #000000; }
+    a { color: #666666; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
+    pre { background: #000; color: #fff; padding: 15px; overflow: auto}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
   </style>
@@ -43,10 +43,12 @@
     </div>
 
     <h1><a href="http://github.com/dhorrigan/iRedis">iRedis</a>
-      <span class="small">by <a href="http://github.com/dhorrigan">dhorrigan</a></span></h1>
+      <span class="small">by <a href="http://github.com/dhorrigan">Dan Horrigan</a></span></h1>
 
     <div class="description">
-      <p>iRedis is a simple and fast Redis PHP library. It has been modeled after Redisent, and infact contains some Redisent code (copyrights remain).</p>
+      iRedis is a simple and fast Redis PHP library.
+    </div>
+      <p>This library has been modeled after Redisent, and infact contains some Redisent code (copyrights remain).</p>
 
       <p>iRedis was created because Redisent has stopped active development and was in need of a facelift.</p>
       
@@ -67,8 +69,7 @@ echo $redis-&gt;get('myval'); // Outputs 'Hello World!'</code></pre>
 
       <h2>Requirements</h2>
 
-      iRedis requires Redis version 1.2 and greater. This is because it uses the Unified Request protocol.
-    </div>
+      <p>iRedis requires Redis version 1.2 and greater. This is because it uses the Unified Request protocol.</p>
 
     <h2>Authors</h2>
 <p>Dan Horrigan (dan@dhorrigan.com)</p>
