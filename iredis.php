@@ -160,7 +160,7 @@ class iRedis {
             case iRedis::BULK:
                 if ($reply == '$-1')
                 {
-                    break;
+                    return null;
                 }
                 $response = $this->readBulkReply($reply);
             break;
