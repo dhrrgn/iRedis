@@ -59,13 +59,20 @@ $redis = new iRedis();</code></pre>
       
       <p>By default iRedis will use a hostname of 'localhost' and a port of 6379. If you would like to use a different server or port you can send a config array to the constructor.</p>
 
-      <pre><code>$redis = new iRedis(array('hostname' => 'redis.foo.com', 'port' => 6425));</code></pre>
+      <pre>$redis = new iRedis(array('hostname' => 'redis.foo.com', 'port' => 6425));</pre>
       
       To run commands simply call that method on the iRedis object:
 
-      <pre>$redis-&gt;set('myval', 'Hello World!');
+      <pre>// Setting a key
+$redis-&gt;set('myval', 'Hello World!');
 
-echo $redis-&gt;get('myval'); // Outputs 'Hello World!'</code></pre>
+// Getting a key
+echo $redis-&gt;get('myval'); // Outputs 'Hello World!'
+
+// Pushing an item onto a list
+$redis->lpush('mylist', 'Foo');
+
+// etc...</pre>
 
       <h2>Requirements</h2>
 
